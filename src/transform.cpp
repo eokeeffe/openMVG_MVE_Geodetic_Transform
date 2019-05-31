@@ -12,6 +12,9 @@
 #include <rapidjson/stringbuffer.h>
 #include <rapidjson/ostreamwrapper.h>
 
+#include <boost/filesystem.hpp>
+
+using namespace boost::filesystem;
 using namespace rapidjson;
 
 #define DEBUG_ACTIVE 0
@@ -178,7 +181,16 @@ main (int argc, char** argv)
     // You can either apply transform_1 or transform_2; they are the same
     pcl::transformPointCloud (*source_cloud, *transformed_cloud, final_m);
 
-    std::string writePath = "geo_OUTPUT.ply";
+    boost::filesystem::path p(argv[1]);
+    std::string writePath;
+    if(DEBUG_ACTIVE){
+        std::cout << "filename and extension : " << p.filename() << std::endl; // file.ext
+        std::cout << "filename only          : " << p.stem() << std::endl;     // file
+        std::cout << "parent directory       : " << p.parent_path() << std::endl;// directory less filename.ext
+    }
+    //writePath = "geo_OUTPUT.ply";
+    writePath = p.parent_path().string()+"geo"+p.filename().string();
+    std::cout << "writing to:" << writePath << std::endl;
     pcl::io::savePLYFileBinary(writePath, *transformed_cloud);
     return 0;
 }

@@ -29,6 +29,8 @@ rapidjson/stringbuffer.h
 -
 rapidjson/ostreamwrapper.h
 -
+boost/filesystem.hpp
+-
 
 /usr/include/eigen3/Eigen/Cholesky
 Core

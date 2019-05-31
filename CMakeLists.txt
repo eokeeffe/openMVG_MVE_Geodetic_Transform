@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.2)
 project(pcl_utils)
 
 # set the verison specifics
-SET(Cohors_VERSION_MAJOR 0)
-SET(Cohors_VERSION_MINOR 1)
+SET(APP_VERSION_MAJOR 0)
+SET(APP_VERSION_MINOR 1)
 
 # check compiler compatibility
 include(CheckCXXCompilerFlag)
@@ -24,6 +24,7 @@ find_package(PCL 1.5 REQUIRED)
 
 # include headers and definitions
 include_directories(${PCL_INCLUDE_DIRS})
+include_directories(${Boost_INCLUDE_DIRS})
 link_directories(${PCL_LIBRARY_DIRS})
 add_definitions(${PCL_DEFINITIONS})
 
@@ -31,6 +32,9 @@ add_definitions(${PCL_DEFINITIONS})
 add_executable (apply_transform src/transform.cpp)
 
 # link programs to required libraries
-target_link_libraries (apply_transform ${PCL_LIBRARIES})
+target_link_libraries (apply_transform ${PCL_LIBRARIES}
+    ${Boost_FILESYSTEM_LIBRARY}
+    ${Boost_SYSTEM_LIBRARY}
+    )
 
 # No install directions, keep program runs local

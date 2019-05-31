@@ -107,6 +107,8 @@ apply_transform: /usr/local/lib/libboost_atomic.so
 apply_transform: /usr/local/lib/libboost_regex.so
 apply_transform: /usr/lib/x86_64-linux-gnu/libqhull.so
 apply_transform: /usr/lib/x86_64-linux-gnu/libflann_cpp.so
+apply_transform: /usr/local/lib/libboost_filesystem.so
+apply_transform: /usr/local/lib/libboost_system.so
 apply_transform: /usr/local/lib/libpcl_ml.so
 apply_transform: /usr/local/lib/libpcl_registration.so
 apply_transform: /usr/local/lib/libpcl_features.so
@@ -117,6 +119,14 @@ apply_transform: /usr/local/lib/libpcl_kdtree.so
 apply_transform: /usr/local/lib/libpcl_io.so
 apply_transform: /usr/local/lib/libpcl_octree.so
 apply_transform: /usr/local/lib/libpcl_common.so
+apply_transform: /usr/local/lib/libboost_thread.so
+apply_transform: /usr/local/lib/libboost_date_time.so
+apply_transform: /usr/local/lib/libboost_iostreams.so
+apply_transform: /usr/local/lib/libboost_serialization.so
+apply_transform: /usr/local/lib/libboost_chrono.so
+apply_transform: /usr/local/lib/libboost_atomic.so
+apply_transform: /usr/local/lib/libboost_regex.so
+apply_transform: /usr/lib/x86_64-linux-gnu/libqhull.so
 apply_transform: CMakeFiles/apply_transform.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/evan/Contracting/ProvEye/WorkingDirectory/PLY_Transform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable apply_transform"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/apply_transform.dir/link.txt --verbose=$(VERBOSE)
