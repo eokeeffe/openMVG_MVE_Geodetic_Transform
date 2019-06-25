@@ -9,6 +9,14 @@
 /home/evan/Contracting/ProvEye/WorkingDirectory/PLY_Transform/src/transform.cpp
 iostream
 -
+ctype.h
+-
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
 pcl/io/pcd_io.h
 -
 pcl/io/ply_io.h
