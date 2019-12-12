@@ -1,17 +1,15 @@
-<h1> How to use this code </h1>
+# How to use this code
 
-<h2> Steps </h2>
-<ol>
-	<li> Run OpenMVG pipeline without gps priors </li>
-	<li> Run Rigid GPS to XYZ Transformation, pipe output to a file </li>
-	<li> Run transform.py in the scripts folder on the output file from above</li>
-	<li> This gets the geodetic transform and creates a .json file</li>
-	<li> Run apply_transform in the build directory, giving the location of the openMVG/MVE PLY file and location of the .json file</li>
-	<li> Output is a PLY file which is in Earth Centered, Earth Fixed (ECEF) format</li>
-</ol> 
+## Steps
+1. Run OpenMVG pipeline without gps priors
+2. Run Rigid GPS to XYZ Transformation, pipe output to a file
+3. Run transform.py in the scripts folder on the output file from above
+4. This gets the geodetic transform and creates a .json file
+5. Run apply_transform in the build directory, giving the location of the openMVG/MVE PLY file and location of the .json file
+6. Output is a PLY file which is in Earth Centered, Earth Fixed (ECEF) format 
 
 
-<h2> Python code for geodesy transform file reconstruction script</h2>
+ Python code for geodesy transform file reconstruction script</h2>
 ```python
 print ("7. Geodesy rectify")
 f = open(reconstruction_dir+"/geodectic_correction.txt","w")
@@ -23,4 +21,4 @@ f.close()
 ```
 
 
-<h3> Maintainer: Evan O'Keeffe, evanokeeffe@gmail.com </h3>
+### Maintainer: Evan O'Keeffe, evanokeeffe@gmail.com
